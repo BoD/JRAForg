@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="green_120">#BFB</color>
+    <color name="green_110">#AEA</color>
+
+
+    <color name="primary">#040</color>
+    <color name="accent">@color/green_120</color>
+    <color name="primary_dark">#030</color>
+    <color name="background">#020</color>
+
+    <color name="text_glow">@color/green_110</color>
+
+</resources>

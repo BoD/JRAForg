@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="TextAppearance.JrafOrg" parent="TextAppearance.AppCompat" />
+
+    <style name="TextAppearance.JrafOrg.Small">
+        <item name="android:textSize">22sp</item>
+    </style>
+
+
+    <style name="Widget.JrafOrg.TextView" parent="@android:style/Widget.TextView">
+        <item name="fontFamily">@font/term</item>
+        <item name="android:shadowColor">@color/text_glow</item>
+        <item name="android:shadowRadius">12</item>
+    </style>
+
+
+    <style name="Widget.JrafOrg.ActionBar" parent="@style/Widget.AppCompat.ActionBar.Solid">
+        <item name="titleTextStyle">@style/TextAppearance.JrafOrg.Widget.ActionBar.Title</item>
+    </style>
+
+    <style name="TextAppearance.JrafOrg.Widget.ActionBar.Title" parent="" />
+
+</resources>
