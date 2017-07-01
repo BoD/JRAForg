@@ -1,0 +1,61 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion versions.compileSdk
+    buildToolsVersion versions.buildTools
+
+    defaultConfig {
+        applicationId 'org.jraf.android.jraforg'
+        minSdkVersion 23
+        targetSdkVersion versions.targetSdk
+        versionCode buildNumber
+        versionName buildProperties.versionName
+    }
+
+    signingConfigs {
+        release {
+            storeFile file(buildProperties.signingStoreFile)
+            storePassword buildProperties.signingStorePassword
+            keyAlias buildProperties.signingKeyAlias
+            keyPassword buildProperties.signingKeyPassword
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+    }
+}
+
+android.applicationVariants.all { variant ->
+    // Create new copy tasks, for release builds
+    if (variant.buildType.name == 'release') {
+        variant.outputs.each { output ->
+            def outputFile = file("build/outputs/apk/release/$output.outputFileName")
+            def apkName = "${globalProjectName}-${project.name}-${android.defaultConfig.versionCode}-${variant.flavorName}-signed.apk"
+
+            // Copy the apk to the 'etc' folder
+            def copyApkToEtc = tasks.create("copy${variant.name.capitalize()}ApkToEtc", Copy)
+            copyApkToEtc.from(outputFile)
+            copyApkToEtc.into('../etc/apk')
+            copyApkToEtc.rename output.outputFileName, apkName
+
+            // Copy the apk to the deploy folder
+            def copyApkToDeploy = tasks.create("copy${variant.name.capitalize()}ApkToDeploy", Copy)
+            copyApkToDeploy.from(outputFile)
+            copyApkToDeploy.into(buildProperties.deployFolder)
+            copyApkToDeploy.rename output.outputFileName, apkName
+
+            // Make the copy tasks run after the assemble tasks of the variant
+            variant.assemble.finalizedBy(copyApkToEtc, copyApkToDeploy)
+        }
+    }
+}
+
+dependencies {
+    implementation project(':main')
+    implementation project(':base')
+}
