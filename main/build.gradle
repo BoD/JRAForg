@@ -12,7 +12,7 @@ android {
         versionCode buildNumber
         versionName buildProperties.versionName
 
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner 'android.support.test.runner.AndroidJUnitRunner'
 
         // Setting this to true disables the png generation at buildtime
         // (see http://android-developers.blogspot.fr/2016/02/android-support-library-232.html)
@@ -30,16 +30,17 @@ android {
 
     buildTypes {
         release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
             shrinkResources false
             signingConfig signingConfigs.release
         }
     }
 
-    dataBinding {
-        enabled = true
-    }
+    // Disabled for now, see https://issuetracker.google.com/issues/63814741
+//    dataBinding {
+//        enabled = true
+//    }
 
     lintOptions {
         abortOnError true
