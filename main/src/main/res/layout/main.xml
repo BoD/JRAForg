@@ -18,7 +18,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="16dp"
-            android:text="@string/logo"
             android:textSize="17sp" />
 
         <!-- Intro -->
@@ -42,6 +41,7 @@
 
         <!-- Github -->
         <TextView
+            android:id="@+id/github"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="?android:attr/selectableItemBackground"
@@ -50,11 +50,13 @@
             android:drawablePadding="8dp"
             android:focusable="true"
             android:gravity="center_vertical"
+            android:onClick="goTo"
             android:padding="8dp"
             android:text="Github" />
 
         <!-- Play Store -->
         <TextView
+            android:id="@+id/playStore"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="?android:attr/selectableItemBackground"
@@ -63,11 +65,13 @@
             android:drawablePadding="8dp"
             android:focusable="true"
             android:gravity="center_vertical"
+            android:onClick="goTo"
             android:padding="8dp"
             android:text="Play Store" />
 
         <!-- Resume -->
         <TextView
+            android:id="@+id/resume"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="?android:attr/selectableItemBackground"
@@ -76,11 +80,13 @@
             android:drawablePadding="8dp"
             android:focusable="true"
             android:gravity="center_vertical"
+            android:onClick="goTo"
             android:padding="8dp"
             android:text="Resumé" />
 
         <!-- StackOverflow -->
         <TextView
+            android:id="@+id/stackOverflow"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="?android:attr/selectableItemBackground"
@@ -89,11 +95,13 @@
             android:drawablePadding="8dp"
             android:focusable="true"
             android:gravity="center_vertical"
+            android:onClick="goTo"
             android:padding="8dp"
             android:text="StackOverflow" />
 
         <!-- Google+ -->
         <TextView
+            android:id="@+id/gplus"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="?android:attr/selectableItemBackground"
@@ -102,11 +110,13 @@
             android:drawablePadding="8dp"
             android:focusable="true"
             android:gravity="center_vertical"
+            android:onClick="goTo"
             android:padding="8dp"
             android:text="Google+" />
 
         <!-- Twitter -->
         <TextView
+            android:id="@+id/twitter"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="?android:attr/selectableItemBackground"
@@ -115,6 +125,7 @@
             android:drawablePadding="8dp"
             android:focusable="true"
             android:gravity="center_vertical"
+            android:onClick="goTo"
             android:padding="8dp"
             android:text="Twitter" />
 

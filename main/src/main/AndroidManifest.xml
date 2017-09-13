@@ -22,6 +22,7 @@
                 <data android:host="jraf.org" />
                 <data android:scheme="http" />
                 <data android:scheme="https" />
+                <data android:path="/" />
             </intent-filter>
 
             <meta-data

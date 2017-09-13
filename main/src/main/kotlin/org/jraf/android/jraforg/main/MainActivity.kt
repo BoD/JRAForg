@@ -1,10 +1,14 @@
 package org.jraf.android.jraforg.main
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.os.Handler
+import android.support.annotation.StringRes
 import android.support.v7.app.AppCompatActivity
 import android.text.Html
 import android.text.method.LinkMovementMethod
+import android.view.View
 import android.widget.TextView
 
 class MainActivity : AppCompatActivity() {
@@ -14,7 +18,12 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.main)
 
-        animateLogo()
+        if (savedInstanceState == null) {
+            animateLogo()
+        } else {
+            val txtLogo: TextView = findViewById(R.id.txtLogo)
+            txtLogo.text = getText(R.string.logo)
+        }
 
         val txtEmail: TextView = findViewById(R.id.txtEmail)
         txtEmail.movementMethod = LinkMovementMethod.getInstance()
@@ -34,4 +43,18 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    fun goTo(view: View) {
+        when (view.id) {
+            R.id.github -> openLink(R.string.link_github)
+            R.id.playStore -> openLink(R.string.link_playStore)
+            R.id.resume -> openLink(R.string.link_resume)
+            R.id.stackOverflow -> openLink(R.string.link_stackOverflow)
+            R.id.gplus -> openLink(R.string.link_gplus)
+            R.id.twitter -> openLink(R.string.link_twitter)
+        }
+    }
+
+    private fun openLink(@StringRes linkResId: Int) {
+        startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(getString(linkResId))).addCategory(Intent.CATEGORY_BROWSABLE))
+    }
 }

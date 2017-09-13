@@ -6,4 +6,12 @@
 / // / , _/ __ |/ _/_/ _ \\/ __/ _ `/
 \\___/_/|_/_/ |_/_/ (_)___/_/  \\_, /
                              /___/"]]></string>
+
+    <string name="link_github">https://github.com/BoD</string>
+    <string name="link_playStore">https://play.google.com/store/apps/developer?id=BoD</string>
+    <string name="link_resume">https://JRAF.org/blubek</string>
+    <string name="link_stackOverflow">https://stackoverflow.com/users/15695/bod</string>
+    <string name="link_gplus">http://JRAF.org/+</string>
+    <string name="link_twitter">https://twitter.com/BoD</string>
+
 </resources>
