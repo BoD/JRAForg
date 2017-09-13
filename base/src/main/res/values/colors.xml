@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <color name="white">#FFF</color>
+
     <color name="green_120">#BFB</color>
     <color name="green_110">#AEA</color>
 

@@ -10,7 +10,7 @@
         <item name="android:textColorSecondary">@color/accent</item>
         <item name="android:textColorTertiary">@color/accent</item>
         <item name="android:colorBackground">@color/background</item>
-        <item name="android:textColorLink">@color/accent</item>
+        <item name="android:textColorLink">@color/white</item>
         <!--<item name="android:buttonStyle">@style/Widget.CineToday.Button.Colored</item>-->
         <!--<item name="android:alertDialogTheme">@style/Theme.CineToday.Dialog.Alert</item>-->
 
