@@ -1,0 +1,44 @@
+// Versions used across modules
+def versions = [:]
+
+// Plugins
+def plugins = [:]
+plugins.with {
+    androidGradle = '3.3.0-alpha07'
+    gradleVersions = '0.20.0'
+}
+versions.plugins = plugins
+
+// Libs used for building
+def buildLibs = [:]
+buildLibs.with {
+    frc = '1.8.0'
+}
+versions.buildLibs = buildLibs
+
+// Build parameters
+def build = [:]
+build.with {
+    gradle = '4.9'
+    compileSdk = 28
+    targetSdk = 28
+    minSdk = 23
+    tools = '28.0.2'
+}
+versions.build = build
+
+// Testing dependencies
+def testing = [:]
+testing.with {
+    espresso = '3.0.2'
+    junit = '4.12'
+}
+versions.testing = testing
+
+// Other dependencies
+versions.with {
+    kotlin = '1.2.61'
+    supportLibrary = '27.1.1'
+}
+
+ext.versions = versions

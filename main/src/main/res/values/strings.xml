@@ -1,11 +1,11 @@
 <resources>
     <string name="intro">"This is the companion app for Benoit `BoD\' Lubek\'s personal website.  Here you can find a few information about myself.  Enjoy!"</string>
-    <string name="email"><![CDATA[<a href="mailto:BoD@JRAF.org">Contact me.</a>]]></string>
-    <string name="logo"><![CDATA["     _____  ___   ____
+    <string name="email"><![CDATA[<a href=\"mailto:BoD@JRAF.org\">Contact me.</a>]]></string>
+    <string name="logo">"     _____  ___   ____
  __ / / _ \\/ _ | / __/___  _______ _
 / // / , _/ __ |/ _/_/ _ \\/ __/ _ `/
 \\___/_/|_/_/ |_/_/ (_)___/_/  \\_, /
-                             /___/"]]></string>
+                             /___/"</string>
 
     <string name="link_github">https://github.com/BoD</string>
     <string name="link_playStore">https://play.google.com/store/apps/developer?id=BoD</string>
@@ -13,5 +13,11 @@
     <string name="link_stackOverflow">https://stackoverflow.com/users/15695/bod</string>
     <string name="link_gplus">http://JRAF.org/+</string>
     <string name="link_twitter">https://twitter.com/BoD</string>
+    <string name="label_github">Github</string>
+    <string name="label_playStore">Play Store</string>
+    <string name="label_resume">Resumé</string>
+    <string name="label_stackOverflow">StackOverflow</string>
+    <string name="label_gplus">Google+</string>
+    <string name="label_twitter">Twitter</string>
 
 </resources>

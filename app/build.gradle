@@ -1,13 +1,13 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion versions.compileSdk
-    buildToolsVersion versions.buildTools
+    compileSdkVersion versions.build.compileSdk
+    buildToolsVersion versions.build.tools
 
     defaultConfig {
         applicationId 'org.jraf.android.jraforg'
-        minSdkVersion 23
-        targetSdkVersion versions.targetSdk
+        minSdkVersion versions.build.minSdk
+        targetSdkVersion versions.build.targetSdk
         versionCode buildNumber
         versionName buildProperties.versionName
     }

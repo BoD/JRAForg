@@ -1,14 +1,14 @@
 apply plugin: 'com.android.feature'
 
 android {
-    compileSdkVersion versions.compileSdk
-    buildToolsVersion versions.buildTools
+    compileSdkVersion versions.build.compileSdk
+    buildToolsVersion versions.build.tools
 
     baseFeature true
 
     defaultConfig {
-        minSdkVersion 23
-        targetSdkVersion versions.targetSdk
+        minSdkVersion versions.build.minSdk
+        targetSdkVersion versions.build.targetSdk
         versionCode buildNumber
         versionName buildProperties.versionName
     }
@@ -24,7 +24,7 @@ android {
 
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
             signingConfig signingConfigs.release
         }

@@ -52,7 +52,7 @@
             android:gravity="center_vertical"
             android:onClick="goTo"
             android:padding="8dp"
-            android:text="Github" />
+            android:text="@string/label_github" />
 
         <!-- Play Store -->
         <TextView
@@ -67,7 +67,7 @@
             android:gravity="center_vertical"
             android:onClick="goTo"
             android:padding="8dp"
-            android:text="Play Store" />
+            android:text="@string/label_playStore" />
 
         <!-- Resume -->
         <TextView
@@ -82,7 +82,7 @@
             android:gravity="center_vertical"
             android:onClick="goTo"
             android:padding="8dp"
-            android:text="Resumé" />
+            android:text="@string/label_resume" />
 
         <!-- StackOverflow -->
         <TextView
@@ -97,7 +97,7 @@
             android:gravity="center_vertical"
             android:onClick="goTo"
             android:padding="8dp"
-            android:text="StackOverflow" />
+            android:text="@string/label_stackOverflow" />
 
         <!-- Google+ -->
         <TextView
@@ -112,7 +112,7 @@
             android:gravity="center_vertical"
             android:onClick="goTo"
             android:padding="8dp"
-            android:text="Google+" />
+            android:text="@string/label_gplus" />
 
         <!-- Twitter -->
         <TextView
@@ -127,7 +127,18 @@
             android:gravity="center_vertical"
             android:onClick="goTo"
             android:padding="8dp"
-            android:text="Twitter" />
+            android:text="@string/label_twitter" />
+
+        <!-- Version -->
+        <TextView
+            android:id="@+id/txtVersion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:alpha=".4"
+            android:padding="8dp"
+            android:textSize="14sp"
+            tools:text="v1.0.1" />
 
     </LinearLayout>
 </ScrollView>

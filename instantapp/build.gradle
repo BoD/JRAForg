@@ -1,5 +1,7 @@
 apply plugin: 'com.android.instantapp'
 
+// Run './gradlew instantApp:assembleRelease' to build the instant app zip
+
 dependencies {
     implementation project(':main')
     implementation project(':base')
